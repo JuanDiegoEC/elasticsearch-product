@@ -63,9 +63,9 @@ def load_data(es):
 
     print(f"🔄 Cargando {len(actions)} documentos...")
     success, errors = helpers.bulk(es, actions, stats_only=False, raise_on_error=False)
-    print(f"✅ {success} documentos cargados.")
+    print(f"{success} documentos cargados.")
     if errors:
-        print(f"⚠️ {len(errors)} documentos fallaron.")
+        print(f"{len(errors)} documentos fallaron.")
 
 
 if __name__ == "__main__":
