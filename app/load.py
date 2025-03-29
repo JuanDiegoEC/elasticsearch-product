@@ -61,7 +61,7 @@ def load_data(es):
         for _, row in df.iterrows()
     ]
 
-    print(f"🔄 Cargando {len(actions)} documentos...")
+    print(f"Cargando {len(actions)} documentos...")
     success, errors = helpers.bulk(es, actions, stats_only=False, raise_on_error=False)
     print(f"{success} documentos cargados.")
     if errors:
